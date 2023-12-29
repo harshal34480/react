@@ -1,0 +1,26 @@
+{
+  "name": "react_two",
+  "version": "1.0.0",
+  "description": "react from basic to advance",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshal34480/react.git"
+  },
+  "keywords": [
+    "basic",
+    "advance"
+  ],
+  "author": "Harshal Wankhade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshal34480/react/issues"
+  },
+  "homepage": "https://github.com/harshal34480/react#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}
