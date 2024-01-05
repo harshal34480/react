@@ -2,8 +2,9 @@
   "name": "react_two",
   "version": "1.0.0",
   "description": "react from basic to advance",
-  "main": "script.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -22,5 +23,9 @@
   "homepage": "https://github.com/harshal34480/react#readme",
   "devDependencies": {
     "parcel": "^2.10.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
