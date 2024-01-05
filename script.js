@@ -23,7 +23,22 @@ import ReactDOM from "react-dom/client";
 
 // root.render(heading);
 
-const heading = <h1>Hello My name is Harshal</h1>;
-console.log(heading);
+// react element
+//const heading = <h1 className="heading">Hello My name is Harshal</h1>;
+
+// react component => return react element
+// react functional component is a javascript function which return jsx
+// functional component
+const Titel = () => <h1>I am component inside component</h1>;
+
+const HeadingComponent = () => (
+  <div>
+    <Titel />
+    <h1> This is react functional component</h1>
+  </div>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+// to render the react component we have to put component inside angular tag
+// then bable understand it is react component and then it convert into html and view on browser
+root.render(<HeadingComponent />);
