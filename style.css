@@ -1,3 +1,56 @@
-#heading {
-  color: brown;
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo {
+  width: 200px;
+  height: 100px;
+}
+
+.headerLinks > ul {
+  display: flex;
+}
+
+.headerLinks > ul > li {
+  list-style: none;
+  padding: 10px;
+}
+
+.restContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+
+.restCard {
+  background-color: antiquewhite;
+  width: 180px;
+  height: 300px;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.rest_photo {
+  width: 100%;
+}
+
+.searchBar {
+  padding: 5px;
+}
+
+.footer {
+  border: 1px solid black;
+}
+
+.footer > ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer > ul > li {
+  padding: 10px;
+  list-style: none;
 }
