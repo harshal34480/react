@@ -31,3 +31,39 @@
     React js is library and Angular is Framework.
     The framework provides the flow of a software application and tells the developer what it needs and calls the code provided by the developer as required. 
     If a library is used, the application calls the code from the library.
+
+// JSX => babel transpiles it to react.createElement => reactElement-Js object => HTMLElement(render)
+
+// const heading = React.createElement("div", { id: "parent" }, [
+//   React.createElement("div", { id: "child" }, [
+//     React.createElement("h1", { id: "element" }, "Hey iam harshal"),
+//     React.createElement(
+//       "h2",
+//       { id: "element" },
+//       "i'am learning react from basics to advance"
+//     ),
+//   ]),
+//   React.createElement("div", { id: "child" }, [
+//     React.createElement("h1", { id: "element" }, "i'am element one"),
+//     React.createElement("h2", { id: "element" }, "i'am element two"),
+//   ]),
+// ]);
+
+// console.log(heading);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// root.render(heading);
+
+// react element
+//const heading = <h1 className="heading">Hello My name is Harshal</h1>;
+
+// react component => return react element
+// react functional component is a javascript function which return jsx
+// functional component
+
+// we use curly bracket to inject js into ous jsx
+// the Curly bracket sanatized the given js we pass into it
+// we can also js inside curly bracket
+
+// to render the react component we have to put component inside angular tag
+// then bable understand it is react component and then it convert into html and view on browser

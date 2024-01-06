@@ -29,11 +29,17 @@ import ReactDOM from "react-dom/client";
 // react component => return react element
 // react functional component is a javascript function which return jsx
 // functional component
-const Titel = () => <h1>I am component inside component</h1>;
 
+const num = 100;
+
+const titel = <h1>{num} I am component inside component</h1>;
+
+// we use curly bracket to inject js into ous jsx
+// the Curly bracket sanatized the given js we pass into it
+// we can also js inside curly bracket
 const HeadingComponent = () => (
   <div>
-    <Titel />
+    {titel}
     <h1> This is react functional component</h1>
   </div>
 );
