@@ -1,50 +1,91 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// JSX => babel transpiles it to react.createElement => reactElement-Js object => HTMLElement(render)
+// low level design
+// Header
+//   - logo
+//   - links
+// Body
+//   - search bar
+//   - restro container
+//     - restro card
+// Footer
+//   - address
+//   - links
 
-// const heading = React.createElement("div", { id: "parent" }, [
-//   React.createElement("div", { id: "child" }, [
-//     React.createElement("h1", { id: "element" }, "Hey iam harshal"),
-//     React.createElement(
-//       "h2",
-//       { id: "element" },
-//       "i'am learning react from basics to advance"
-//     ),
-//   ]),
-//   React.createElement("div", { id: "child" }, [
-//     React.createElement("h1", { id: "element" }, "i'am element one"),
-//     React.createElement("h2", { id: "element" }, "i'am element two"),
-//   ]),
-// ]);
+const Header = () => (
+  <div className="header">
+    <div className="headerLogo">
+      <img
+        className="logo"
+        alt="food logo"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSddccotAtSgd1R7LzWO7dn9PV2Zdc7_IgVhw&usqp=CAU"></img>
+    </div>
+    <div className="headerLinks">
+      <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+        <li>Cart</li>
+      </ul>
+    </div>
+  </div>
+);
 
-// console.log(heading);
-// const root = ReactDOM.createRoot(document.getElementById("root"));
+const RestCard = () => (
+  <div className="restCard">
+    <img
+      className="rest_photo"
+      alt="food_image"
+      src="https://media.istockphoto.com/id/488481490/photo/fish-biryani-with-basmati-rice-indian-food.jpg?s=612x612&w=0&k=20&c=9xEw3VOQSz9TP8yQr60L47uExyKF9kogRhQdlghlC00="></img>
+    <h3>Moon Foods</h3>
+    <h4>Indian, South Indian</h4>
+    <h4>40 Min</h4>
+    <h4>4.4 stars</h4>
+  </div>
+);
 
-// root.render(heading);
+const Body = () => (
+  <div className="body">
+    <div className="searchBar">search</div>
+    <div className="restContainer">
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+      <RestCard />
+    </div>
+  </div>
+);
 
-// react element
-//const heading = <h1 className="heading">Hello My name is Harshal</h1>;
+const Footer = () => (
+  <div className="footer">
+    <ul>
+      <li>Address</li>
+      <li>Privacy Policy</li>
+      <li>Security Information</li>
+      <li>@Copyright 2024</li>
+      <li>Made by Harshal</li>
+    </ul>
+  </div>
+);
 
-// react component => return react element
-// react functional component is a javascript function which return jsx
-// functional component
-
-const num = 100;
-
-const titel = <h1>{num} I am component inside component</h1>;
-
-// we use curly bracket to inject js into ous jsx
-// the Curly bracket sanatized the given js we pass into it
-// we can also js inside curly bracket
-const HeadingComponent = () => (
+const AppLayout = () => (
   <div>
-    {titel}
-    <h1> This is react functional component</h1>
+    <Header />
+    <Body />
+    <Footer />
   </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// to render the react component we have to put component inside angular tag
-// then bable understand it is react component and then it convert into html and view on browser
-root.render(<HeadingComponent />);
+
+root.render(<AppLayout />);
