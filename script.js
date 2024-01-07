@@ -32,7 +32,8 @@ const Header = () => (
   </div>
 );
 
-const RestCard = () => (
+const RestCard = (props) => (
+  const {resObj} = props
   <div className="restCard">
     <img
       className="rest_photo"
@@ -45,23 +46,76 @@ const RestCard = () => (
   </div>
 );
 
+const resObj = {
+  info: {
+    id: "300767",
+    name: "Hotel Al Hayat",
+    cloudinaryImageId: "puykvy7shqxhuyvdwcdf",
+    locality: "Etwara Bazar",
+    areaName: "Maltekdi",
+    costForTwo: "₹250 for two",
+    cuisines: [
+      "Biryani",
+      "North Indian",
+      "Mughlai",
+      "Maharashtrian",
+      "Beverages",
+    ],
+    avgRating: 4,
+    parentId: "97811",
+    avgRatingString: "4.0",
+    totalRatingsString: "1K+",
+    sla: {
+      deliveryTime: 19,
+      lastMileTravel: 0.2,
+      serviceability: "SERVICEABLE",
+      slaString: "19 mins",
+      lastMileTravelString: "0.2 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2024-01-08 02:00:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textBased: {},
+        textExtendedBadges: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "₹125 OFF",
+      subHeader: "ABOVE ₹199",
+      discountTag: "FLAT DEAL",
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+  },
+  analytics: {},
+  cta: {
+    link: "https://www.swiggy.com/restaurants/hotel-al-hayat-etwara-bazar-maltekdi-amravati-300767",
+    type: "WEBLINK",
+  },
+};
+
 const Body = () => (
   <div className="body">
     <div className="searchBar">search</div>
     <div className="restContainer">
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
-      <RestCard />
+      <RestCard resName={resObj.info.name} />
     </div>
   </div>
 );
