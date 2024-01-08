@@ -32,8 +32,8 @@ const Header = () => (
   </div>
 );
 
-const RestCard = (props) => (
-  const {resObj} = props
+const RestCard = () => (
+
   <div className="restCard">
     <img
       className="rest_photo"
@@ -115,7 +115,7 @@ const Body = () => (
   <div className="body">
     <div className="searchBar">search</div>
     <div className="restContainer">
-      <RestCard resName={resObj.info.name} />
+      <RestCard resName={} />
     </div>
   </div>
 );
