@@ -67,3 +67,24 @@
 
 // to render the react component we have to put component inside angular tag
 // then bable understand it is react component and then it convert into html and view on browser
+
+
+// low level design
+// Header
+//   - logo
+//   - links
+// Body
+//   - search bar
+//   - restro container
+//     - restro card
+// Footer
+//   - address
+//   - links
+
+. there are two type ot import/export 
+1. default export 
+=> export default component;
+=> import component from "path"
+2.named export
+=> export const component;
+=> import {component} from "path";
