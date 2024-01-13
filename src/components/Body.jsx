@@ -7,7 +7,6 @@ const Body = () => {
         <button
           onClick={() => {
             resObj = resObj.filter((res) => res.info.avgRating > 4);
-            console.log(resObj);
           }}>
           Click me
         </button>
