@@ -88,3 +88,6 @@
 2.named export
 => export const component;
 => import {component} from "path";
+
+// react hooks 
+- noraml javascript function in react 
