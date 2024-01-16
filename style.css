@@ -67,3 +67,7 @@
   margin: 10px;
   height: 400px;
 }
+
+.filter {
+  display: flex;
+}
