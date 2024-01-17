@@ -2,7 +2,8 @@ import RestCard from "./RestCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 const Body = () => {
-  let [listOfResturant, updateResturant] = useState([]);
+  const [listOfResturant, setResturant] = useState([]);
+  const [newListofResturant, setnewListofResturant] = useState([]);
   const [searchValue, setsearchValue] = useState("");
   console.log("body");
   useEffect(() => {
@@ -15,7 +16,10 @@ const Body = () => {
     );
     const json = await data.json();
     console.log(json);
-    updateResturant(
+    setResturant(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setnewListofResturant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
@@ -40,7 +44,7 @@ const Body = () => {
                 res.info.name.toLowerCase().includes(searchValue.toLowerCase())
               );
 
-              updateResturant(filterResturant);
+              setResturant(filterResturant);
               console.log(searchValue);
             }}>
             Search
@@ -52,7 +56,7 @@ const Body = () => {
               (res) => res.info.avgRating > 4
             );
             console.log(newList);
-            updateResturant(newList);
+            newListofResturant(newList);
           }}>
           Click me
         </button>
