@@ -19,9 +19,9 @@ const Body = () => {
     setResturant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    setnewListofResturant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    // setnewListofResturant(
+    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    // );
   };
 
   return listOfResturant == 0 ? (
@@ -44,7 +44,7 @@ const Body = () => {
                 res.info.name.toLowerCase().includes(searchValue.toLowerCase())
               );
 
-              setResturant(filterResturant);
+              setnewListofResturant(filterResturant);
               console.log(searchValue);
             }}>
             Search
@@ -63,7 +63,7 @@ const Body = () => {
       </div>
 
       <div className="restContainer">
-        {listOfResturant.map((resturant) => (
+        {newListofResturant.map((resturant) => (
           <RestCard key={resturant.info.id} resData={resturant} />
         ))}
       </div>
