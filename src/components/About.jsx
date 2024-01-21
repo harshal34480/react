@@ -5,3 +5,5 @@ const About = () => {
     <p>food delivery app</p>
   </div>;
 };
+
+export default About;
