@@ -57,7 +57,7 @@ const Body = () => {
               (res) => res.info.avgRating > 4
             );
             console.log(newList);
-            filteredRestaurent(newList);
+            setfilteredRestaurent(newList);
           }}>
           Click me
         </button>
