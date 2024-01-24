@@ -1,5 +1,8 @@
 import { APP_LOGO } from "../utils/essentials";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Body from "./Body";
+import Contact from "./Contact";
 
 const Header = () => {
   const [btn, setBtn] = useState("Login");
@@ -11,10 +14,18 @@ const Header = () => {
       </div>
       <div className="headerLinks">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/about"}>About Us</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Contact Us</Link>
+          </li>
+          <li>
+            <Link to={"/cart"}>Cart</Link>
+          </li>
           <li>
             <button
               onClick={() => {
