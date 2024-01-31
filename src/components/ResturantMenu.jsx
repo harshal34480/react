@@ -7,7 +7,7 @@ const ResturantMenu = () => {
   const [resInfo, setresInfo] = useState(null);
 
   const { resId } = useParams();
-  console.log(resId);
+
   useEffect(() => {
     fetchResturant();
   }, []);
