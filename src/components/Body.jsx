@@ -9,6 +9,7 @@ const Body = () => {
 
   const [searchValue, setsearchValue] = useState("");
   console.log("body");
+
   useEffect(() => {
     apiData();
   }, []);
