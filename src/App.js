@@ -42,7 +42,7 @@ const appRouter = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: "/resturantmenu/:dynId",
+        path: "/resturantmenu/:resId",
         element: <ResturantMenu />,
       },
     ],
