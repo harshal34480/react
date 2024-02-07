@@ -3,9 +3,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Body from "./Body";
 import Contact from "./Contact";
+import useOnline from "../utils/useOnline";
 
 const Header = () => {
   const [btn, setBtn] = useState("Login");
+  const onlineStatus = useOnline();
 
   return (
     <div className="header">
@@ -14,6 +16,8 @@ const Header = () => {
       </div>
       <div className="headerLinks">
         <ul>
+          <li>Online Status : {onlineStatus ? "✅" : "⛔"}</li>
+
           <li>
             <Link to={"/"}>Home</Link>
           </li>
